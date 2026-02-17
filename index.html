@@ -4,27 +4,86 @@
   <meta charset="UTF-8">
   <title>DECLAG Reinigung Service</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #f9f9f9; }
-    h1 { color: #2c3e50; }
-    ul { list-style-type: square; }
-    .contact { margin-top: 20px; }
-    .discount { color: green; font-weight: bold; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+
+    /* Sticky navigation bar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #2c3e50;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .content {
+      padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+    }
+
+    .contact {
+      margin-top: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+      border: 2px solid #ccc;
+    }
   </style>
 </head>
 <body>
-  <h1>DECLAG Reinigung Service</h1>
-  <p>Optional: Umweltfreundliches Reinigungsmitteln</p>
+  <!-- Sticky Menu Bar -->
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#services">Leistungen</a>
+    <a href="#flyer">Flyer</a>
+    <a href="#contact">Kontakt</a>
+  </div>
 
-  <h2>Unterhaltreinigung:</h2>
-  <ul>
-    <li>Büroreinigung</li>
-    <li>Haushaltreinigung</li>
-    <li>Praxis Einrichtungen</li>
-  </ul>
+  <div class="content" id="home">
+    <h1>DECLAG Reinigung Service</h1>
+    <p>Optional: Umweltfreundliches Reinigungsmitteln</p>
+  </div>
 
-  <p class="discount">Rabatt 20% für Neukunden!</p>
+  <div class="content" id="services">
+    <h2>Unterhaltreinigung:</h2>
+    <ul style="list-style-type: square; text-align:left; display:inline-block;">
+      <li>Büroreinigung</li>
+      <li>Haushaltreinigung</li>
+      <li>Praxis Einrichtungen</li>
+    </ul>
+  </div>
 
-  <div class="contact">
+  <div class="content" id="flyer">
+    <h2>Unser Flyer</h2>
+    <!-- Replace flyer.jpg with your actual image filename -->
+    <img src="flyer.jpeg" alt="DECLAG Flyer">
+  </div>
+
+  <div class="content" id="contact">
+    <h2>Kontakt</h2>
     <p>Tel: 015560834524</p>
     <p>WhatsApp: 015773933953</p>
     <p>Email: declag.B@gmx.de</p>
