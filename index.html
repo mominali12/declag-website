@@ -7,7 +7,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #000; /* background behind flyer */
+      background: rgb(175,202,228); /* custom background color */
     }
 
     /* Sticky navigation bar */
@@ -38,15 +38,12 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh; /* full viewport height */
-      background: #000;
     }
 
     .flyer img {
-      max-width: 100%;
-      max-height: 100vh;
-      height: auto;
-      width: auto;
-      object-fit: contain; /* keeps aspect ratio, no distortion */
+      max-width: 90%;   /* keeps flyer centered and responsive */
+      height: auto;     /* preserves aspect ratio */
+      object-fit: contain;
       border: none;
     }
 
@@ -64,27 +61,9 @@
   </style>
 </head>
 <body>
-  <!-- Sticky Menu Bar -->
-  <div class="navbar">
-    <a href="#home">Home</a>
-    <a href="#flyer">Flyer</a>
-    <a href="#contact">Kontakt</a>
-  </div>
-
-  <div class="flyer" id="home">
-    <h1 style="position:absolute; top:80px; color:white;">DECLAG Reinigung Service</h1>
-  </div>
-
-  <div class="content" id="flyer">
-    <!-- Replace flyer.jpg with your actual image filename -->
-    <img src="flyer.jpeg" alt="DECLAG Flyer">
-  </div>
-
-  <div class="contact" id="contact">
-    <h2>Kontakt</h2>
-    <p>Tel: 015560834524</p>
-    <p>WhatsApp: 015773933953</p>
-    <p>Email: declag.B@gmx.de</p>
+  <div class="flyer" id="flyer">
+    <!-- Replace flyer.jpg with your actual flyer image filename -->
+    <img src="flyer.jpg" alt="DECLAG Flyer">
   </div>
 </body>
 </html>
