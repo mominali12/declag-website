@@ -5,9 +5,9 @@
   <title>DECLAG Reinigung Service</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      background: #000; /* background behind flyer */
     }
 
     /* Sticky navigation bar */
@@ -32,24 +32,34 @@
       text-decoration: underline;
     }
 
-    .content {
+    /* Flyer section */
+    .flyer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh; /* full viewport height */
+      background: #000;
+    }
+
+    .flyer img {
+      max-width: 100%;
+      max-height: 100vh;
+      height: auto;
+      width: auto;
+      object-fit: contain; /* keeps aspect ratio, no distortion */
+      border: none;
+    }
+
+    /* Contact section */
+    .contact {
       padding: 40px;
       text-align: center;
+      background: #f9f9f9;
     }
 
     h1 {
       color: #2c3e50;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-top: 20px;
-      border: 2px solid #ccc;
-    }
-
-    .contact {
-      margin-top: 40px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -61,8 +71,8 @@
     <a href="#contact">Kontakt</a>
   </div>
 
-  <div class="content" id="home">
-    <h1>DECLAG Reinigung Service</h1>
+  <div class="flyer" id="home">
+    <h1 style="position:absolute; top:80px; color:white;">DECLAG Reinigung Service</h1>
   </div>
 
   <div class="content" id="flyer">
@@ -70,7 +80,7 @@
     <img src="flyer.jpeg" alt="DECLAG Flyer">
   </div>
 
-  <div class="content contact" id="contact">
+  <div class="contact" id="contact">
     <h2>Kontakt</h2>
     <p>Tel: 015560834524</p>
     <p>WhatsApp: 015773933953</p>
