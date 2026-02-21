@@ -24,11 +24,21 @@
     }
 
     .flyer img {
-      max-width: 90%;   /* keeps flyer centered and responsive */
-      height: auto;     /* preserves aspect ratio */
-      object-fit: contain;
-      border: none;
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 40px auto;
+
+      /* Blend with background */
+      mix-blend-mode: multiply;   /* try 'overlay' or 'screen' for different effects */
+
+      /* Optional soft edges */
+      border-radius: 20px;        /* rounds corners */
+      box-shadow: 0 0 40px rgba(0,0,0,0.2); /* soft shadow to fade edges */
+      mask-image: radial-gradient(circle, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
     }
+
 
     /* Contact section */
     .contact {
