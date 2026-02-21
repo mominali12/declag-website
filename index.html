@@ -29,15 +29,28 @@
       display: block;
       margin: 40px auto;
 
-      /* Blend with background */
-      mix-blend-mode: multiply;   /* try 'overlay' or 'screen' for different effects */
+      /* Soft fade on all sides */
+      -webkit-mask-image: linear-gradient(to right, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,1) 15%, 
+        rgba(0,0,0,1) 85%, 
+        rgba(0,0,0,0) 100%);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: cover;
 
-      /* Optional soft edges */
-      border-radius: 20px;        /* rounds corners */
-      box-shadow: 0 0 40px rgba(0,0,0,0.2); /* soft shadow to fade edges */
-      mask-image: radial-gradient(circle, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
-      -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);
+      mask-image: linear-gradient(to right, 
+        rgba(0,0,0,0) 0%, 
+        rgba(0,0,0,1) 15%, 
+        rgba(0,0,0,1) 85%, 
+        rgba(0,0,0,0) 100%);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+
+      -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%), linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%); -webkit-mask-composite: intersect; mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%), linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%); mask-composite: intersect;
     }
+
 
 
     /* Contact section */
