@@ -1,0 +1,139 @@
+{
+  "image": {
+    "file": "declag-website/flyer.jpeg",
+    "width": 768,
+    "height": 1535,
+    "note": "Width/height are the canvas used for bounding boxes (px)."
+  },
+  "elements": [
+    {
+      "id": "logo_top_left",
+      "type": "logo",
+      "role": "brand_mark",
+      "raw_text": null,
+      "clean_text": null,
+      "style": {
+        "color": "#84C63A",
+        "shape": "three-leaf"
+      },
+      "bbox": { "x": 40, "y": 20, "width": 80, "height": 72 },
+      "bbox_norm": { "x": 0.052, "y": 0.013, "width": 0.104, "height": 0.047 },
+      "confidence": 0.85,
+      "notes": "Small decorative green leaf mark at top-left."
+    },
+    {
+      "id": "heading_arc",
+      "type": "text",
+      "role": "page_heading",
+      "raw_text": "DECLAG REINIGUNG SERVICE",
+      "clean_text": "DECLAG REINIGUNG SERVICE",
+      "style": {
+        "font_weight": "bold",
+        "case": "uppercase",
+        "color": "#D83B2D",
+        "layout": "arched/curved"
+      },
+      "bbox": { "x": 50, "y": 30, "width": 668, "height": 160 },
+      "bbox_norm": { "x": 0.065, "y": 0.020, "width": 0.870, "height": 0.104 },
+      "confidence": 0.95,
+      "notes": "Large red, arched headline near top-center."
+    },
+    {
+      "id": "left_services_block",
+      "type": "text_list",
+      "role": "services_list",
+      "raw_text": "Optional:\n• Umweltfreundliches\nReinigungsmittel\n\nUnterhaltreinigung:\n• Büroreiniung\n• Haushaltreinigung\n• Praxis einrichtungen",
+      "clean_text": "Optional:\n• Umweltfreundliche Reinigungsmittel\n\nUnterhaltsreinigung:\n• Büroreinigung\n• Haushaltreinigung\n• Praxiseinrichtungen",
+      "style": {
+        "font_size": "medium",
+        "color": "#C44A3D",
+        "bullets": "red dots"
+      },
+      "items": [
+        { "type": "group_label", "text": "Optional", "raw_text": "Optional:", "confidence": 0.9 },
+        { "type": "bullet", "text": "Umweltfreundliche Reinigungsmittel", "raw_text": "• Umweltfreundliches Reinigungsmittel", "confidence": 0.9 },
+        { "type": "group_label", "text": "Unterhaltsreinigung", "raw_text": "Unterhaltreinigung:", "confidence": 0.9 },
+        { "type": "bullet", "text": "Büroreinigung", "raw_text": "• Büroreiniung", "confidence": 0.88 },
+        { "type": "bullet", "text": "Haushaltreinigung", "raw_text": "• Haushaltreinigung", "confidence": 0.92 },
+        { "type": "bullet", "text": "Praxiseinrichtungen", "raw_text": "• Praxis einrichtungen", "confidence": 0.88 }
+      ],
+      "bbox": { "x": 30, "y": 300, "width": 320, "height": 420 },
+      "bbox_norm": { "x": 0.039, "y": 0.196, "width": 0.417, "height": 0.274 },
+      "confidence": 0.92,
+      "notes": "Left column list of services; contains two groups (Optional, Unterhaltsreinigung) and bullets."
+    },
+    {
+      "id": "main_illustration",
+      "type": "illustration",
+      "role": "hero_graphic",
+      "raw_text": null,
+      "clean_text": null,
+      "style": {
+        "subject": "woman cleaning",
+        "colors": "red apron, yellow gloves, blue jeans"
+      },
+      "bbox": { "x": 300, "y": 180, "width": 420, "height": 930 },
+      "bbox_norm": { "x": 0.391, "y": 0.117, "width": 0.547, "height": 0.605 },
+      "confidence": 0.98,
+      "notes": "Large central-right illustration: cleaner with cleaning tool, bucket and sponge at feet."
+    },
+    {
+      "id": "contact_tel",
+      "type": "text",
+      "role": "contact_tel",
+      "raw_text": "Tel: 015560834524",
+      "clean_text": "Tel: 01556 0834524",
+      "style": { "font_size": "medium", "color": "#C44A3D" },
+      "bbox": { "x": 160, "y": 1080, "width": 448, "height": 60 },
+      "bbox_norm": { "x": 0.208, "y": 0.704, "width": 0.583, "height": 0.039 },
+      "confidence": 0.96
+    },
+    {
+      "id": "contact_whatsapp",
+      "type": "text",
+      "role": "contact_whatsapp",
+      "raw_text": "Whatsapp: 015773933953",
+      "clean_text": "Whatsapp: 01577 3933953",
+      "style": { "font_size": "medium", "color": "#C44A3D" },
+      "bbox": { "x": 160, "y": 1148, "width": 448, "height": 60 },
+      "bbox_norm": { "x": 0.208, "y": 0.748, "width": 0.583, "height": 0.039 },
+      "confidence": 0.96
+    },
+    {
+      "id": "contact_email",
+      "type": "text",
+      "role": "contact_email",
+      "raw_text": "Email: declag.B@gmx.de",
+      "clean_text": "Email: declag.B@gmx.de",
+      "style": { "font_size": "medium", "color": "#C44A3D" },
+      "bbox": { "x": 160, "y": 1216, "width": 448, "height": 80 },
+      "bbox_norm": { "x": 0.208, "y": 0.793, "width": 0.583, "height": 0.052 },
+      "confidence": 0.97
+    }
+  ],
+  "layout_suggestion": {
+    "desktop": {
+      "structure": "two-column",
+      "left": "services_list (30%-40%)",
+      "right": "hero_illustration (60%-70%)",
+      "footer": "contact centered at bottom"
+    },
+    "mobile": {
+      "structure": "stacked",
+      "order": ["logo", "heading", "hero_illustration", "services_list", "contact"],
+      "notes": "Use responsive font scaling; keep contact lines clickable (tel, whatsapp link, mailto)."
+    }
+  },
+  "html_mapping": {
+    "heading": { "tag": "h1", "class": "flyer-heading" },
+    "services_list": { "tag": "aside", "class": "flyer-services" },
+    "hero_illustration": { "tag": "figure", "class": "flyer-hero" },
+    "contact": { "tag": "footer", "class": "flyer-contact" }
+  },
+  "notes": [
+    "Bounding boxes are approximate and intended to seed a responsive layout.",
+    "Raw text may contain OCR/reading errors — 'Unterhaltreinigung' corrected to 'Unterhaltsreinigung', 'Büroreiniung' -> 'Büroreinigung'.",
+    "Colors were estimated visually; sample hex codes are approximate and can be refined.",
+    "If you want exact pixel boxes, I can run an image processor (pytesseract + detection) if you allow installing packages or provide exact image dimensions from a read operation."
+  ]
+}

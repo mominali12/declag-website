@@ -83,7 +83,7 @@
     <footer class="contact">
       <div class="contact-line">
         <a class="contact-link" href="tel:+4915560834524">
-          <img class="icon" src="icons/phone.svg" alt="Telefon" width="20" height="20" />
+          <i class="fa-solid fa-phone"></i>
           <span>Tel: 01556 0834524</span>
         </a>
       </div>
@@ -101,36 +101,52 @@
           <span>Email: declag.B@gmx.de</span>
         </a>
       </div>
+
+      <!-- Horizontal line -->
+      <hr class="footer-separator" />
+
+      <!-- Footer links -->
+      <div class="footer-items">
+        <a href="impressum.html" class="footer-link">
+          <i class="fa-solid fa-circle-info"></i>
+          <span>Impressum</span>
+        </a>
+        <a href="privacy.html" class="footer-link">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span>Datenschutz</span>
+        </a>
+      </div>
     </footer>
   </main>
 </body>
 <script>
-function updateArc() {
-  const svg = document.querySelector('.heading-arc svg');
-  const path = document.getElementById('arcPath');
-  const text = svg.querySelector('.arc-text textPath');
-  const textLength = text.getComputedTextLength();
+  function updateArc() {
+    const svg = document.querySelector('.heading-arc svg');
+    const path = document.getElementById('arcPath');
+    const text = svg.querySelector('.arc-text textPath');
+    const textLength = text.getComputedTextLength();
 
-  const width = svg.viewBox.baseVal.width; // 1000
-  const height = svg.viewBox.baseVal.height; // 300
+    const width = svg.viewBox.baseVal.width; // 1000
+    const height = svg.viewBox.baseVal.height; // 300
 
-  // Determine a radius based on text length and SVG width
-  const padding = 50; // leave space on edges
-  const effectiveWidth = width - padding * 2;
-  const radius = Math.max(150, effectiveWidth / 2); // min radius = 150
+    // Determine a radius based on text length and SVG width
+    const padding = 50; // leave space on edges
+    const effectiveWidth = width - padding * 2;
+    const radius = Math.max(150, effectiveWidth / 2); // min radius = 150
 
-  // Arc path using quadratic Bézier
-  const startX = (width - effectiveWidth) / 2;
-  const endX = width - startX;
-  const controlY = height - radius; // peak of the arc
-  const controlX = width / 2;
+    // Arc path using quadratic Bézier
+    const startX = (width - effectiveWidth) / 2;
+    const endX = width - startX;
+    const controlY = height - radius; // peak of the arc
+    const controlX = width / 2;
 
-  const d = `M${startX} ${height - 50} Q${controlX} ${controlY} ${endX} ${height - 50}`;
-  path.setAttribute('d', d);
-}
+    const d = `M${startX} ${height - 50} Q${controlX} ${controlY} ${endX} ${height - 50}`;
+    path.setAttribute('d', d);
+  }
 
-// Update on load and on window resize
-window.addEventListener('load', updateArc);
-window.addEventListener('resize', updateArc);
+  // Update on load and on window resize
+  window.addEventListener('load', updateArc);
+  window.addEventListener('resize', updateArc);
 </script>
+
 </html>
