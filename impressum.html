@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Impressum - DECLAG Reinigung Service</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-center">
+            <div class="heading-arc">
+                <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet">
+                    <!-- Dynamic arc path -->
+                    <path id="arcPath" fill="none" />
+
+                    <text class="arc-text">
+                        <textPath href="#arcPath" startOffset="50%" text-anchor="middle">
+                            <a href="index.html" style="color: var(--muted); text-decoration: none;">DECLAG REINIGUNG SERVICE</a>
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="impressum container">
+            <h1>Impressum</h1>
+
+            <h2>Information according to § 5 TMG</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><b>DECLAG Reinigung Service</b></td>
+                    </tr>
+                    <tr>
+                        <td>Inh. Deborah Wehner-Ugboma</td>
+                    </tr>
+                    <tr>
+                        <td>Scharweg 78a 24149 Kiel</td>
+                    </tr>
+                    <tr>
+                        <td>Email: declag.B@gmx.de
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phone: +49 175 6423601</td>
+                    </tr>
+                    <tr>
+                        <td>This website and the services offered <b>do not constitute legal advice.</b></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>EU dispute resolution</h3>
+            <p>
+                The European Commission offers an online dispute resolution (OS) platform, accessible at
+                <a href="https://ec.europa.eu/consumers/odr">https://ec.europa.eu/consumers/odr</a>. My
+                email address can be found in the above imprint.
+            </p>
+
+            <h3>Consumer dispute resolution/universal dispute resolution body</h3>
+            <p>
+                I prefer not to engage in dispute resolution processes through consumer arbitration boards,
+                and I am under no obligation to do so.
+            </p>
+
+            <h3>Beware of scams!</h3>
+            <p>
+                Please note that I do not engage in hiring individuals or maintain any business
+                partnerships. If someone approaches you claiming to provide services or job opportunities on
+                my behalf, exercise caution, as it is likely a fraudulent scheme.
+            </p>
+
+            <h3>Liability for content</h3>
+            <p>
+                As a service provider, I bear responsibility for the content posted on these pages, in
+                strict compliance with the applicable legal provisions outlined in Section 7 (1) of the
+                German Telemedia Act. Pursuant to Sections 8 to 10 of the TMG, it is important to note that
+                I am not under an obligation to actively monitor or investigate transmitted or stored
+                third-party information, unless there are clear indications of unlawful activity.
+            </p>
+            <p>
+                Responsibilities concerning the removal or restriction of information in compliance with
+                applicable laws remain unchanged. Liability under these circumstances arises only when I am
+                made aware of a specific legal infringement. Once I am notified of such legal violations,
+                prompt action will be taken to remove the content in question.
+            </p>
+
+            <h3>Liability for links</h3>
+            <p>
+                My proposal includes references to external third-party websites, for which I bear no
+                control over their content. Consequently, I cannot assume any responsibility for the content
+                found on these external platforms. The content of the linked pages is solely the
+                responsibility of their respective providers or operators. It is important to note that, at
+                the time of incorporating these links, a thorough review was conducted to ensure compliance
+                with legal standards, and no infringing content was identified during this evaluation.
+            </p>
+            <p>
+                Continuous monitoring of the content on linked pages is not practical unless substantiated
+                evidence of a legal violation emerges. In the event that I am made aware of any legal
+                infractions, I will promptly take the necessary steps to remove such links. Rest assured,
+                maintaining compliance with legal standards is a top priority.
+            </p>
+        </section>
+        <!-- Horizontal line -->
+        <hr class="footer-separator" />
+
+        <footer class="contact">
+            <div class="contact-line">
+                <a class="contact-link" href="tel:+4915560834524">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>01556 0834524</span>
+                </a>
+            </div>
+
+            <div class="contact-line">
+                <a class="contact-link" href="https://wa.me/4915773933953" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>01577 3933953</span>
+                </a>
+            </div>
+
+            <div class="contact-line">
+                <a class="contact-link" href="mailto:declag.B@gmx.de">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>declag.B@gmx.de</span>
+                </a>
+            </div>
+
+            <!-- Footer links -->
+            <div class="footer-items">
+                <a href="impressum.html" class="footer-link">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Impressum</span>
+                </a>
+                <a href="privacypolicy.html" class="footer-link">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Datenschutz</span>
+                </a>
+            </div>
+        </footer>
+        <footer class="footer-bottom text-center py-3" style="color: var(--muted);">
+            &copy; <a href="index.html" style="color: var(--muted); text-decoration: none;">DECLAG</a>, All Right
+            Reserved.
+        </footer>
+    </main>
+</body>
+<script>
+    function updateArc() {
+        const svg = document.querySelector('.heading-arc svg');
+        const path = document.getElementById('arcPath');
+        const text = svg.querySelector('.arc-text textPath');
+        const textLength = text.getComputedTextLength();
+
+        const width = svg.viewBox.baseVal.width; // 1000
+        const height = svg.viewBox.baseVal.height; // 300
+
+        // Determine a radius based on text length and SVG width
+        const padding = 50; // leave space on edges
+        const effectiveWidth = width - padding * 2;
+        const radius = Math.max(150, effectiveWidth / 2); // min radius = 150
+
+        // Arc path using quadratic Bézier
+        const startX = (width - effectiveWidth) / 2;
+        const endX = width - startX;
+        const controlY = height - radius; // peak of the arc
+        const controlX = width / 2;
+
+        const d = `M${startX} ${height - 50} Q${controlX} ${controlY} ${endX} ${height - 50}`;
+        path.setAttribute('d', d);
+    }
+
+    // Update on load and on window resize
+    window.addEventListener('load', updateArc);
+    window.addEventListener('resize', updateArc);
+</script>
+
+</html>

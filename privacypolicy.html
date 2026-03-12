@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Impressum - DECLAG Reinigung Service</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-center">
+            <div class="heading-arc">
+                <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet">
+                    <!-- Dynamic arc path -->
+                    <path id="arcPath" fill="none" />
+
+                    <text class="arc-text">
+                        <textPath href="#arcPath" startOffset="50%" text-anchor="middle">
+                            <a href="index.html" style="color: var(--muted); text-decoration: none;">DECLAG REINIGUNG SERVICE</a>
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <section class="privacy container">
+            <h1>Privacy Policy</h1>
+
+            <h2>Data protection declaration</h2>
+            <p>
+                The purpose of this website is to make the content accessible.
+                The person responsible within the meaning of the General Data Protection Regulation (GDPR)
+                and other national data protection laws is the person named in the legal notice.
+                When you visit this website, the following data and information from the device used to
+                access the website are collected:
+            </p>
+            <ul>
+                <li>Date and time of an operation</li>
+                <li>Your IP address</li>
+                <li>Which pages, scripts and graphics were accessed by you</li>
+                <li>Your browser type and version</li>
+                <li>Click paths between pages, scripts and graphics</li>
+                <li>From which page you came to this website (if you came here via a link)</li>
+                <li>Parameters submitted to this website by the referring site</li>
+            </ul>
+            <p>The data collected is only used for statistical evaluations and to improve the website.</p>
+            <!-- <p>
+            When you set an appointment, data is shared with Setmore. You can check details on data
+            collected by them <a href="https://www.setmore.com/privacy">here</a>.
+        </p> -->
+        </section>
+        <!-- Horizontal line -->
+        <hr class="footer-separator" />
+
+        <footer class="contact">
+            <div class="contact-line">
+                <a class="contact-link" href="tel:+4915560834524">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>01556 0834524</span>
+                </a>
+            </div>
+
+            <div class="contact-line">
+                <a class="contact-link" href="https://wa.me/4915773933953" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>01577 3933953</span>
+                </a>
+            </div>
+
+            <div class="contact-line">
+                <a class="contact-link" href="mailto:declag.B@gmx.de">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>declag.B@gmx.de</span>
+                </a>
+            </div>
+
+            <!-- Footer links -->
+            <div class="footer-items">
+                <a href="impressum.html" class="footer-link">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Impressum</span>
+                </a>
+                <a href="privacypolicy.html" class="footer-link">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Datenschutz</span>
+                </a>
+            </div>
+        </footer>
+        <footer class="footer-bottom text-center py-3" style="color: var(--muted);">
+            &copy; <a href="index.html" style="color: var(--muted); text-decoration: none;">DECLAG</a>, All Right
+            Reserved.
+        </footer>
+    </main>
+</body>
+<script>
+    function updateArc() {
+        const svg = document.querySelector('.heading-arc svg');
+        const path = document.getElementById('arcPath');
+        const text = svg.querySelector('.arc-text textPath');
+        const textLength = text.getComputedTextLength();
+
+        const width = svg.viewBox.baseVal.width; // 1000
+        const height = svg.viewBox.baseVal.height; // 300
+
+        // Determine a radius based on text length and SVG width
+        const padding = 50; // leave space on edges
+        const effectiveWidth = width - padding * 2;
+        const radius = Math.max(150, effectiveWidth / 2); // min radius = 150
+
+        // Arc path using quadratic Bézier
+        const startX = (width - effectiveWidth) / 2;
+        const endX = width - startX;
+        const controlY = height - radius; // peak of the arc
+        const controlX = width / 2;
+
+        const d = `M${startX} ${height - 50} Q${controlX} ${controlY} ${endX} ${height - 50}`;
+        path.setAttribute('d', d);
+    }
+
+    // Update on load and on window resize
+    window.addEventListener('load', updateArc);
+    window.addEventListener('resize', updateArc);
+</script>
+
+</html>
