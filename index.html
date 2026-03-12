@@ -1,75 +1,136 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>DECLAG Reinigung Service</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Arial Narrow", Arial, sans-serif;
-      background-image: url("texture.png"); /* replace with your texture image filename */
-      background-size: cover;       /* scales texture to cover entire page */
-      background-repeat: no-repeat; /* prevents tiling */
-      background-attachment: fixed; /* keeps texture fixed when scrolling */
-      background-position: center;  /* centers the texture */
-    }
-
-
-    /* Flyer section */
-    .flyer {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh; /* full viewport height */
-    }
-
-    .flyer img {
-      max-width: 90%;
-      height: auto;
-      display: block;
-      margin: 40px auto;
-
-      /* Soft fade on all sides */
-      -webkit-mask-image: linear-gradient(to right, 
-        rgba(0,0,0,0) 0%, 
-        rgba(0,0,0,1) 5%, 
-        rgba(0,0,0,1) 95%, 
-        rgba(0,0,0,0) 100%);
-      -webkit-mask-repeat: no-repeat;
-      -webkit-mask-position: center;
-      -webkit-mask-size: cover;
-
-      mask-image: linear-gradient(to right, 
-        rgba(0,0,0,0) 0%, 
-        rgba(0,0,0,1) 5%, 
-        rgba(0,0,0,1) 95%, 
-        rgba(0,0,0,0) 100%);
-      mask-repeat: no-repeat;
-      mask-position: center;
-      mask-size: cover;
-
-      -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%), linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%); -webkit-mask-composite: intersect; mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%), linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 5%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%); mask-composite: intersect;
-    }
-
-
-
-    /* Contact section */
-    .contact {
-      padding: 40px;
-      text-align: center;
-      background: #f9f9f9;
-    }
-
-    h1 {
-      color: #2c3e50;
-      margin-bottom: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <div class="flyer" id="flyer">
-    <!-- Replace flyer.jpg with your actual flyer image filename -->
-    <img src="flyer.jpeg" alt="DECLAG Flyer">
-  </div>
+  <header class="site-header">
+    <!-- <div class="logo" aria-hidden="true">
+      <svg width="56" height="56" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <g fill="#84C63A">
+          <ellipse cx="32" cy="18" rx="12" ry="18" />
+          <ellipse cx="20" cy="30" rx="8" ry="12" transform="rotate(-30 20 30)" />
+          <ellipse cx="44" cy="30" rx="8" ry="12" transform="rotate(30 44 30)" />
+        </g>
+      </svg>
+    </div> -->
+    <div class="header-center">
+      <!-- <div class="heading-arc">
+        <svg viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
+
+          <path id="arcPath" d="M80 150 Q400 20 720 150" fill="none" />
+
+          <text class="arc-text">
+            <textPath href="#arcPath" startOffset="50%" text-anchor="middle" textLength="800">
+              DECLAG REINIGUNG SERVICE
+            </textPath>
+          </text>
+
+        </svg>
+      </div> -->
+      <div class="heading-arc">
+        <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet">
+          <!-- Dynamic arc path -->
+          <path id="arcPath" fill="none" />
+
+          <text class="arc-text">
+            <textPath href="#arcPath" startOffset="50%" text-anchor="middle">
+              DECLAG REINIGUNG SERVICE
+            </textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="columns">
+      <aside class="services" aria-labelledby="services-heading">
+        <h2 id="services-heading">Leistungen</h2>
+
+        <div class="service-groups">
+          <div class="group">
+            <h3>Optional</h3>
+            <ul>
+              <li><span class="bullet"></span>Umweltfreundliche Reinigungsmittel</li>
+            </ul>
+          </div>
+
+          <div class="group">
+            <h3>Unterhaltsreinigung</h3>
+            <ul>
+              <li><span class="bullet"></span>Büroreinigung</li>
+              <li><span class="bullet"></span>Haushaltreinigung</li>
+              <li><span class="bullet"></span>Praxiseinrichtungen</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <section class="hero">
+        <figure class="hero-figure">
+          <img src="cleaner_image.png" alt="Illustration einer Reinigungskraft" />
+        </figure>
+      </section>
+    </section>
+
+    <footer class="contact">
+      <div class="contact-line">
+        <a class="contact-link" href="tel:+4915560834524">
+          <img class="icon" src="icons/phone.svg" alt="Telefon" width="20" height="20" />
+          <span>Tel: 01556 0834524</span>
+        </a>
+      </div>
+
+      <div class="contact-line">
+        <a class="contact-link" href="https://wa.me/4915773933953" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Whatsapp: 01577 3933953</span>
+        </a>
+      </div>
+
+      <div class="contact-line">
+        <a class="contact-link" href="mailto:declag.B@gmx.de">
+          <i class="fa-solid fa-envelope"></i>
+          <span>Email: declag.B@gmx.de</span>
+        </a>
+      </div>
+    </footer>
+  </main>
 </body>
+<script>
+function updateArc() {
+  const svg = document.querySelector('.heading-arc svg');
+  const path = document.getElementById('arcPath');
+  const text = svg.querySelector('.arc-text textPath');
+  const textLength = text.getComputedTextLength();
+
+  const width = svg.viewBox.baseVal.width; // 1000
+  const height = svg.viewBox.baseVal.height; // 300
+
+  // Determine a radius based on text length and SVG width
+  const padding = 50; // leave space on edges
+  const effectiveWidth = width - padding * 2;
+  const radius = Math.max(150, effectiveWidth / 2); // min radius = 150
+
+  // Arc path using quadratic Bézier
+  const startX = (width - effectiveWidth) / 2;
+  const endX = width - startX;
+  const controlY = height - radius; // peak of the arc
+  const controlX = width / 2;
+
+  const d = `M${startX} ${height - 50} Q${controlX} ${controlY} ${endX} ${height - 50}`;
+  path.setAttribute('d', d);
+}
+
+// Update on load and on window resize
+window.addEventListener('load', updateArc);
+window.addEventListener('resize', updateArc);
+</script>
 </html>
